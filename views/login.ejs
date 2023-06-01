@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Login Page</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/login.css">
+    <%- include('partials/_header') %>
+  </head>
+  <body>
+
+    <div class = "row" style="min-height:70vh">
+
+  <!-- Side bar Area -->
+  <div class="sidebar_column col-md-5 text-start py-5 border border-dark">
+  <section id = "sidebar">
+    <div class="container fluid text-center">
+      <h6 class = " display-6 ">Life without coffee is like something without something … sorry, I haven’t had any coffee yet.</h6>
+      <div class = "text-center my-5 ms-5 ps-5 d-none d-md-block col-lg-8">
+      <img src="https://images.all-free-download.com/images/graphicthumb/break_time_drawing_people_drink_coffee_icon_6835776.jpg" alt="" class = "img-fluid ms-5">
+      </div>
+    </div>
+    </section>
+</div>
+
+  <!-- Login  -->
+  <div class="login col-md-7 border border-dark">
+  <div class=" login_container container-md ms-5 mt-5">
+    <section id = "login_form">
+    <form action="/login" method="POST" class = "login-inputs">
+      <h4 class = "display-6 mb-4">Sign in to Example Cafe</h4>
+      <div class="user-input row mb-3 col-md-5">
+        <label for="inputEmail3" class="col-sm-2 col-form-label me-1">Email</label>
+        <div class="col-sm-10">
+          <input type="email" class="form-control" id="inputEmail3" name="email">
+        </div>
+      </div>
+      <div class="user-input row mb-3 col-md-5 ">
+        <label for="inputPassword3" class="col-sm-2 col-form-label me-1">Password</label>
+        <div class="col-sm-10 mb-3">
+          <input type="password" class="form-control" id="inputPassword3" name="password">
+        </div>
+      </div>
+      <button class = "btn btn-danger text-center px-5 mb-4">Login</button>
+      <p>Don't have an account? Sign up <a href = "/register">here</a></p>
+    </form>
+  </section>
+  </div>
+</div>
+</div>
+</div>
+
+<%- include('partials/_footer') %>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+  </body>
+</html>
+
+

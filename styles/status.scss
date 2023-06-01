@@ -1,0 +1,27 @@
+.order_info {
+  margin-left: 5em;
+
+  .confirmed {
+    color: red;
+    font-size: larger;
+  }
+
+  p {
+    font-size: larger;
+  }
+}
+
+footer {
+  position: absolute;
+  bottom: 0px;
+  width: 100vw;
+}
+
+img {
+  width: 10%;
+}
+
+a{
+  text-decoration: none;
+  color: white;
+}

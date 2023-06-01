@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Playfair+Display&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+<title>Order</title>
+<link rel="stylesheet" href="styles/order.css">
+
+<!-- Navbar -->
+<%- include('partials/_header') %>
+</head>
+<body>
+    <main>
+        <div class="title">
+            <h1>Menu</h1>
+        </div>
+
+        <span>
+          <% for(const item of items) { %>
+            <div class="item ">
+                <p class="shop-item-title"><%= item.name %></p>
+                <img class="img shop-item-image" src=<%= item.imgurl %> alt="">
+                <article>
+                    <p class="shop-item-price"><%= item.cost %></p>
+                    <button class="shop-item-button">ADD TO CART</button>
+                </article>
+            </div>
+          <% } %>
+        </span>
+        <section class="container content-section">
+            <h2 class="section-header">CART</h2>
+            <div class="cart-row">
+                <span class="cart-item cart-header cart-column">ITEM</span>
+                <span class="cart-price cart-header cart-column">PRICE</span>
+                <span class="cart-quantity cart-header cart-column">QUANTITY</span>
+            </div>
+            <div class="cart-items">
+
+            </div>
+            <div class="cart-total">
+                <strong class="cart-total-title">Total</strong>
+                <span class="cart-total-price">$0</span>
+            </div>
+            <form action="/sms" method="POST">
+              <button type="submit" class="btn btn-primary btn-purchase" type="button">PURCHASE</button>
+            </form>
+        </section>
+        <%- include('partials/_footer') %>
+    </main>
+
+
+    <script src="scripts/orderpage.js"></script>
+
+</body>
+</html>
